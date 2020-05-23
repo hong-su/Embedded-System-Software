@@ -30,6 +30,11 @@ int main(int argc, char **argv){
 			return -1;
 		}
 	}
+	command[0] = atoi(argv[1]);
+	if(command[0] < 1 || command[0] > 100){
+		printf("Usage : [TIMER_INTERVAL 1-100] [TIMER_CNT] [TIMER_ INIT]\n");
+		return -1;
+	} 
 
 	/* Timer count is not valid */
 	for(i=strlen(argv[2])-1; i>=0; i--){
@@ -38,6 +43,11 @@ int main(int argc, char **argv){
 			return -1;
 		}
 	}
+	command[1] = atoi(argv[2]);
+	if(command[1] < 1 || command[1] > 100){
+		printf("Usage : [TIMER_INTERVAL] [TIMER_CNT 1-100] [TIMER_ INIT]\n");
+		return -1;
+	} 
 
 	/* Timer init is not valid */
 	if(strlen(argv[3]) != 4){
@@ -65,8 +75,6 @@ int main(int argc, char **argv){
 		return -1;
 	}
 	ioctl(fd, IOCTL_SET_OPTION, argv[3]);
-	command[0] = atoi(argv[1]);
-	command[1] = atoi(argv[2]);
 	ioctl(fd, IOCTL_COMMAND, command);
 	close(fd);
 	
