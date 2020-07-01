@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+    <Button
+        android:id="@+id/btprojunload"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:text="Proj Unload" />
+
+    <Button
+        android:id="@+id/bthw3run"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:text="HW3 Run" />
+
+    <Button
+        android:id="@+id/bthw3unload"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        android:layout_alignLeft="@+id/bthw3run"
+        android:layout_below="@+id/bthw3run"
+        android:text="HW3 Unload" />
+
+    <Button
+        android:id="@+id/btprojload"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        android:layout_above="@+id/btprojunload"
+        android:layout_alignLeft="@+id/btprojunload"
+        android:text="Proj Load" />
+
+    <Button
+        android:id="@+id/bthw2load"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/btprojload"
+        android:layout_centerHorizontal="true"
+        android:text="HW2 Load" />
+
+    <Button
+        android:id="@+id/bthw3load"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        android:layout_above="@+id/bthw3run"
+        android:layout_alignLeft="@+id/bthw3run"
+        android:text="HW3 Load" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et1"
+        android:layout_alignRight="@+id/et1"
+        android:layout_below="@+id/et1"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et2"
+        android:layout_alignRight="@+id/et2"
+        android:layout_below="@+id/et2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bthw2run"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/et3"
+        android:layout_below="@+id/et3"
+        android:text="HW2 Run" />
+
+    <Button
+        android:id="@+id/bthw2unload"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/bthw3unload"
+        android:layout_alignLeft="@+id/bthw2run"
+        android:text="HW2 Unload" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bthw3run"
+        android:layout_alignLeft="@+id/bthw2load"
+        android:layout_alignRight="@+id/bthw2load"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et1"
+        android:layout_toLeftOf="@+id/et1"
+        android:text="Timer Interval" />
+
+    <CheckedTextView
+        android:id="@+id/CheckedTextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et2"
+        android:layout_alignLeft="@+id/checkedTextView1"
+        android:text="Timer cnt" />
+
+    <CheckedTextView
+        android:id="@+id/CheckedTextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et3"
+        android:layout_alignLeft="@+id/CheckedTextView01"
+        android:text="Timer init" />
+
+    <CheckedTextView
+        android:id="@+id/CheckedTextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et3"
+        android:layout_toRightOf="@+id/et3"
+        android:text="0001-8000" />
+
+    <CheckedTextView
+        android:id="@+id/CheckedTextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et3"
+        android:layout_alignLeft="@+id/CheckedTextView05"
+        android:text="1-100" />
+
+    <CheckedTextView
+        android:id="@+id/CheckedTextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et2"
+        android:layout_alignLeft="@+id/CheckedTextView04"
+        android:text="1-100" />
+
+    <Button
+        android:id="@+id/bthw1run"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        android:layout_alignBottom="@+id/bthw2unload"
+        android:layout_alignLeft="@+id/btprojunload"
+        android:text="HW1 Run" />
+
+</RelativeLayout>
